@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+   --RobotoFont: "Roboto", sans-serif; 
+
+/* ### Primary */
+    --Tomato: hsl(4, 100%, 67%);
+
+/* ### Neutral */
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Accent */
+
+    --clr-accent-400: hsl(4, 100%, 67%);
+    --clr-accent-500: hsl(347, 100%, 66%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--RobotoFont);
+    background-color: var(--CharcoalGrey);
+    height: 100vh;
+
+}
+
+p,ul,button {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--DarkSlateGrey);
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+}
+
+@media only screen and (min-width:500px) {
+    img {
+        border-radius: 20px;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--DarkSlateGrey);
+}
+
+.container {
+    display: grid;
+    background-color: var(--White);
+    min-width: 375px; 
+}
+
+.container .content {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.checklist {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.checklist li {
+    display: grid;
+    grid-template-columns: 2rem auto;
+}
+
+.checklist li::before {
+    content: url("assets/images/icon-list.svg");
+    margin-inline-end: 1rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-group .field {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.fieldheading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+.fieldheading input {
+    grid-column: 1 / -1;;
+}
+
+.fieldheading label {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.fieldheading .error {
+    font-size: 0.8rem;
+    font-family: inherit;
+    font-weight: 700;
+    color: var(--Tomato);
+    text-align: right;
+}
+
+.form-group input {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: inherit;
+    border: 1px solid var(--Grey);
+}
+
+
+
+.form-group button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: inherit;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    font-weight: 700;
+}
+
+.form-group button:hover {
+    background: linear-gradient(90deg, var(--clr-accent-500), var(--clr-accent-400));
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px;
+}
+
+@media only screen and (min-width:500px) {
+    .container {
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p,ul,button {
+       font-size: 1rem;
+    }
+
+    .container {
+        grid-template-columns: 480px 420px;
+        border-radius: 40px;;
+        max-height: 600px;
+        max-width: 900px;
+    }
+
+    picture {
+        grid-column: 2;
+        margin: 1.5rem;
+    }
+
+    .container .content{
+        grid-row: 1;
+        padding: 4rem 0 4rem 2rem;
+        margin: 1.5rem;
+    }
+
+    
+}
+
+/* Success Message Container */
+
+span {
+    font-weight: 700;
+}
+
+.container2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 20px;
+    background-color: var(--White);
+    margin-top: 50px;
+}
+
+.container2 p {
+    font-weight: 400;;
+}
+
+
+.container2 .successContent {
+    display: flex;
+}
+
+.container2 .successContent .successContentGrid {
+    display: grid;
+    gap: 30px;
+}
+
+.container2 .successBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.successBtn button {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: inherit;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    font-weight: 700;
+}
+
+.successBtn button:hover {
+    background: linear-gradient(90deg, var(--clr-accent-500), var(--clr-accent-400));
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--CharcoalGrey);
+        height: 100vh;
+    }
+
+    .container2 {
+        max-width: 400px;
+        max-height: 400px;
+        padding: 40px;
+        margin: 0;
+        gap: 15px;
+        border-radius: 30px;
+    }
+
+    .container2 .successContent .successContentGrid {
+        gap: 15px;
+    }
+
+    .successContentGrid img {
+        max-width: 50px;
+    }
+
+    p{
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.invalid {
+    display: none;
+}
