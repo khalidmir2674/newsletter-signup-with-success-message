@@ -186,11 +186,12 @@ span {
 }
 
 .container2 {
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    margin: 20px;
+    padding: 30px;
     background-color: var(--White);
-    margin-top: 50px;
 }
 
 .container2 p {
@@ -207,8 +208,13 @@ span {
     gap: 30px;
 }
 
-.container2 .successBtn {
+.successContentGrid img {
+    max-width: 50px;
+}
+
+.container2 .successBtn  {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: flex-end;
 }
